@@ -1,0 +1,14 @@
+eureka:
+  instance:
+       lease-renewal-interval-in-seconds: 10
+       lease-expiration-duration-in-seconds: 30
+       prefer-ip-address: true
+       hostname: apiNetty
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:vap}:${EUREKA_PORT:8761}/eureka/
+
+
+
